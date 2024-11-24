@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1><%= title %></h1>
+
+<!-- Form chỉnh sửa xe -->
+<form action="/edit/<%= car._id %>" method="POST">
+    <h2>Edit Car</h2>
+    <label for="name">Car Name:</label>
+    <input type="text" id="name" name="name" value="<%= car.name %>" required>
+
+    <label for="manufacturer">Manufacturer:</label>
+    <input type="text" id="manufacturer" name="manufacturer" value="<%= car.manufacturer %>" required>
+
+    <label for="year">Year:</label>
+    <input type="number" id="year" name="year" value="<%= car.year %>" required>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" value="<%= car.price %>" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"><%= car.description %></textarea>
+
+    <button type="submit">Update Car</button>
+</form>
+</body>
+</html>
